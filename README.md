@@ -30,3 +30,7 @@ If you'd like to talk about software development, discuss potential opportunitie
 
 - **LinkedIn:** [linkedin.com/in/aleshia-mcrae-](https://www.linkedin.com/in/aleshia-mcrae-/)
 - **Email:** aleshiamcrae04@gmail.com
+  
+##  Acknowledgments & Credits
+
+- Base layout structure inspired by YouTube creator "PROROZ".
