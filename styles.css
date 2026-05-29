@@ -16,10 +16,11 @@
     width: 100%;
     height: 100vh;
 
-    background-image: url('images/bpic4.jpg');
+    background-image: url('images/bpic6.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    opacity: 0.9;
     
     z-index: -1;
 
@@ -45,13 +46,62 @@
     padding:15px 0;
     align-items: center;
     box-sizing: border-box; 
+    font-family: Ubuntu;
+    position: relative;
+    z-index: 10;
 }
 
 .navbar .logo{
-    width: 120px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90px;
+    height: 90px;
     cursor: pointer;
     margin-top: -1%;
     margin-left: -2%;
+}
+
+.bg-heart{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+    transform: scale(1);
+    transition: transform 0.4s ease;
+}
+
+.bg-heart path{
+     stroke: #9BD671;
+}
+
+.navbar .logo:hover .bg-heart{
+    transform: scale(1.12);
+    
+}
+
+.logo-text{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 24px;
+    font-weight: bold;
+    color: #3B2349;
+    z-index: 2;
+    letter-spacing: 1px;
+}
+
+.dev-tag{
+    position: absolute;
+    bottom: 8px;
+    right: -5px;
+    background: #3B2349;
+    color: white;
+    font-size: 9px;
+    font-weight: bold;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-family: 'Courier New', Courier, monospace;
+    z-index: 3;
 }
 
 ul{
@@ -70,13 +120,13 @@ ul li a{
     text-decoration: none;
     font-size: 16px;
     font-weight: bold;
-    color: darkblue;
+    color: #3B2349;
     margin-top: -3%;
     transition: .4s ease;
 }
 
 ul li a:hover{
-    color: rgb(128, 0, 128);
+    color: #9BD671;
 }
 
 .info{
@@ -87,26 +137,32 @@ ul li a:hover{
 
 .info h1{
     font-size: 65px;
-    color: rgb(36,32,30)
+    color: #3B2349;
+    font-family: Ubuntu;
 }
 
 .info h3{
     font-size: 18px;
     letter-spacing: 1px;
     line-height: 24px;
+    color: white;
+    font-family: 'courier new', courier, monospace;
 }
 
 .info a{
     text-decoration: none;
     color: white;
-    background: rgb(1, 0, 128);
+    background: #3B2349;
     padding: 10px 18px;
     border-radius: 10px;
     display: inline-block;
+    transition: 1s ease;
+    font-family: Ubuntu;
 }
 
 .info a:hover{
-    background: rgb(128,0,128);
+    background: #9BD671;
+    color: #3B2349;
 }
 
 .image{
@@ -114,12 +170,13 @@ ul li a:hover{
     height: 60%;
     position: absolute;
     right:0;
-    bottom:0;
+    bottom: 100px;
+   
 }
 
 .image img{
     position: absolute;
-    height: 150%;
+    height: 160%;
     left: 35%;
     transform: translate(-70%);
     bottom:0;
@@ -140,11 +197,13 @@ ul li a:hover{
     gap: 10px;
     margin-top: 0;
     box-sizing: border-box; 
+    color: #3B2349
 }
 
 .footer p {
     margin: 0;
     text-align: center;
+    font-family: Ubuntu;
 }
 
 .footer-links {
