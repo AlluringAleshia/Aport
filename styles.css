@@ -217,3 +217,51 @@ ul li a:hover{
     height: 30px;
     object-fit: contain;
 }
+
+/* Container that holds both the photo and text side-by-side */
+.about-wrapper {
+    width: 86%;
+    margin: auto;
+    margin-top: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Pushes image to the far left, text to the far right */
+    gap: 5%; /* Adds a clean breathing gap between them */
+}
+
+/* Styles the text container on the right */
+.about-info {
+    width: 50%; /* Takes up the right half of the screen */
+    color: rgb(36,32,30);
+}
+
+.about-info h1 {
+    font-size: 65px;
+    color: #3B2349;
+    font-family: Ubuntu;
+    margin-bottom: 20px;
+}
+
+.about-info h3 {
+    font-size: 18px;
+    letter-spacing: 1px;
+    line-height: 28px;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    margin-bottom: 30px;
+}
+
+/* Styles the headshot container on the left */
+.about-image {
+    width: 40%; /* Takes up the left side */
+    display: flex;
+    justify-content: center;
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 400px; /* Keeps your photo from becoming too massive */
+    height: auto;
+    border-radius: 15px; /* Optional: gives your image a clean, slightly rounded chic corner */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15); /* Optional: adds a premium subtle shadow depth */
+}
