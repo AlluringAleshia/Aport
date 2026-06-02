@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> Projects </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="main">
+
+        <div class="navbar">
+
+           <a href="index.html" style="text-decoration: none;">
+            <div class="logo">
+                <svg class="bg-heart" viewBox="0 0 32 32">
+                    <path fill="none" stroke="#3B2349" stroke-width="1.5" d="M16,28.2 C16,28.2 2,18.2 2,11 C2,6.5 5.5,3 10,3 C12.6,3 14.8,4.2 16,6.2 C17.2,4.2 19.4,3 22,3 C26.5,3 20,6.5 30,11 C30,18.2 16,28.2 16,28.2 Z"/>
+                </svg>
+                <span class="logo-text">AM.</span>
+                <div class="dev-tag">DEV</div>
+            </div>
+        </a>
+
+            <ul>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    
+        <div class="about-wrapper"> 
+        
+            
+               <h1 class="glowing-tech-title"> My Projects </h1>
+
+               <div class="slider-wrapper">
+
+                <button class="nav-arrow prev-btn" id="prevBtn">&#10094;</button>
+                <button class="nav-arrow next-btn" id="nextBtn">&#10095;</button>
+
+               <div class="slider-container">
+                <div class="slider-track" id="sliderTrack">
+
+            
+                
+                    <div class="card">
+                       
+                        <div class="card-content">
+                            <h3>ChatAI</h3>
+                            <p>A C#/ .NET 8.0 conversational application integrating the OpenAI API. Manages stateful conversation histories and leverages algorithmic sentiment analysis.
+                            </p>
+
+                            <div class="card-tech-stack">
+                                <span>C#</span>
+                                <span>.NET 8.0</span>
+                                <span>OpenAI API</span>
+                            </div>
+                        </div>
+                        <a href="https://github.com/AlluringAleshia" target="_blank" class="card-btn">View on GitHub</a>
+                    </div>
+
+                    <div class="card">
+                        
+                        <div class="card-content">
+                            <h3>Sonara</h3>
+                            <p>A full-stack wellness platform built with Java/Spring Boot and React. Migrated architecture to a persistent PostgreSQL database layer using Spring Data JPA. 
+                            </p>
+
+                            <div class="card-tech-stack">
+                                <span>Java</span>
+                                <span>Spring Boot</span>
+                                <span>Postman</span>
+                            </div>
+                        </div>
+                        <a href="https://github.com/AlluringAleshia" target="_blank" class="card-btn">View on GitHub</a>
+                    </div>
+
+                    <div class="card">
+                        
+                        <div class="card-content">
+                            <h3>NutriDash</h3>
+                            <p>A three lane endless runner game client engineered in Unity using C#. Driven by a decoupled, event-based architecture with adaptive HUD UI scaling for younger audiences.
+                            </p>
+
+                            <div class="card-tech-stack">
+                                <span>Unity</span>
+                                <span>C#</span>
+                                <span>Draw.io</span>
+                            </div>
+                        </div>
+                        <a href="https://github.com/AlluringAleshia" target="_blank" class="card-btn">View on GitHub</a>
+                    </div>
+
+                    <div class="card">
+                       
+                        <div class="card-content">
+                            <h3>EduFinder</h3>
+                            <p>An Android mobile app that integrates external third-party data APIs to deliver personalized, data-driven academic major recommendation matrices.
+                            </p>
+
+                            <div class="card-tech-stack">
+                                <span>Java</span>
+                                <span>Android Studio</span>
+                                <span>External APIs</span>
+                            </div>
+                        </div>
+                        <a href="https://github.com/AlluringAleshia" target="_blank" class="card-btn">View on GitHub</a>
+                    </div>
+
+                    <div class="card">
+                        
+                        <div class="card-content">
+                            <h3>Network Security</h3>
+                            <p>A comprehensive vulnerability and risk assessment evaluating emergent cybersecurity threats, protocols, and mitigation frameworks across modern IoT ecosystems.
+                            </p>
+
+                            <div class="card-tech-stack">
+                                <span>IoT Security</span>
+                                <span>Nmap</span>
+                                <span>Wireshark</span>
+                            </div>
+                        </div>
+                        <a href="https://github.com/AlluringAleshia" target="_blank" class="card-btn">View on GitHub</a>
+                    </div>
+
+              
+         </div>
+          </div>
+           </div>
+            </div>
+
+        <footer class="footer">
+            <p>&copy; 2026 Aleshia McRae. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="https://github.com/AlluringAleshia" target="_blank" rel="noopener"><img src="images/Githublogo.png" alt="GitHub" /></a>
+                <a href="https://www.linkedin.com/in/aleshia-mcrae-/" target="_blank" rel="noopener"><img src="images/linkedinlogo.png" alt="LinkedIn" /></a>
+                <a href="mailto:aleshiamcrae04@gmail.com" target="_blank" rel="noopener"><img src="images/emaillogo.png" alt="Email" /></a>
+            </div>
+
+        </footer>
+   
+
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+            const prevButton = document.getElementById('prevBtn');
+            const nextButton = document.getElementById('nextBtn');
+            const track = document.getElementById('sliderTrack');
+
+            
+            if (prevButton && nextButton && track) {
+                
+                
+                nextButton.addEventListener('click', () => {
+                    const card = document.querySelector('.card');
+                    const cardWidth = card ? card.offsetWidth : 300;
+                    const gap = 20; 
+                    
+                    track.scrollBy({
+                        left: (cardWidth + gap),
+                        behavior: 'smooth'
+                    });
+                });
+
+            
+                prevButton.addEventListener('click', () => {
+                    const card = document.querySelector('.card');
+                    const cardWidth = card ? card.offsetWidth : 300;
+                    const gap = 20;
+                    
+                    track.scrollBy({
+                        left: -(cardWidth + gap),
+                        behavior: 'smooth'
+                    });
+                });
+            }
+        });
+        </script>
+    </body>
+     </html> 
