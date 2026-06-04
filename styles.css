@@ -1,9 +1,17 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
 .main{
     width: 100%;
-    min-height: 100vh;
+    flex: 1;
     position: relative;
     font-family: 'Poppins', sans-serif;
-    overflow: hidden;
+    overflow: visible;
 }
 
 .main::before {
@@ -131,7 +139,7 @@ ul li a:hover{
 }
 
 .info h1{
-    font-size: 5px;
+    font-size: 65px;
     color: #3B2349;
     font-family: Ubuntu;
 }
@@ -166,7 +174,6 @@ ul li a:hover{
     position: absolute;
     right:0;
     bottom: 100px;
-   
 }
 
 .image img{
@@ -190,9 +197,9 @@ ul li a:hover{
     align-items: center;
     justify-content: center;
     gap: 10px;
-    margin-top: 0;
+    margin-top: auto;
     box-sizing: border-box; 
-    color: #3B2349
+    color: #3B2349;
 }
 
 .footer p {
@@ -213,7 +220,6 @@ ul li a:hover{
     object-fit: contain;
 }
 
-
 .about-wrapper {
     width: 60%;
     margin: auto;
@@ -225,12 +231,10 @@ ul li a:hover{
     gap: 25px;
     font-size: 32px;
     color:#3B2349
-   
 }
 
-/* Styles the text container on the right */
 .about-info {
-    width: 100%; /* Takes up the right half of the screen */
+    width: 100%;
     color: rgb(36,32,30);
 }
 
@@ -250,14 +254,11 @@ ul li a:hover{
     font-weight: bold;
 }
 
-
-
-/* Styles the headshot container on the left */
 .about-image {
     width: auto; 
     display: flex;
     justify-content: center;
-    position: relative
+    position: relative;
 }
 
 .about-image img {
@@ -266,7 +267,7 @@ ul li a:hover{
     object-fit: cover;
     border-radius: 50%; 
     border: 3px solid #3B2349;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.15); /
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
 }
 
 .about-info p {
@@ -280,7 +281,6 @@ ul li a:hover{
     margin-left: auto;
     margin-right: auto;
 }
-
 
 .about-hire-btn {
     text-decoration: none;
@@ -317,7 +317,7 @@ ul li a:hover{
     border-radius: 50%;
     border: 3px solid #3B2349;
     box-shadow: 0 10px 20px rgba(0,0,0,0.15);
-    transition: opacity 0.4s ease-in-out;
+    transition: opacity 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
 }
 
 .image-hover-container .hover-img {
@@ -339,7 +339,6 @@ ul li a:hover{
     box-shadow: 0 0 35px rgba(218, 113, 240, 0.6); 
 }
 
-
 .glowing-tech-title {
     font-size: 36px !important; 
     color: #9BD671 !important;  
@@ -349,12 +348,9 @@ ul li a:hover{
     margin-top: 5px;
     margin-bottom: 35px;
     font-weight: bold;
-    
-   
     text-shadow: 
         0 0 10px rgba(155, 214, 113, 0.6),
         0 0 20px rgba(255, 105, 180, 0.4);
-    
     animation: textGlowPulse 4s ease-in-out infinite alternate;
 }
 
@@ -371,7 +367,6 @@ ul li a:hover{
             0 0 40px rgba(218, 113, 240, 0.4);
     }
 }
-
 
 @keyframes revealFromLeft {
     from {
@@ -393,34 +388,6 @@ ul li a:hover{
         opacity: 1;
         transform: translateX(0);
     }
-}
-
-.image-hover-container img{
-    width: 280px;
-    height: 280px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 3px solid #3B2349;
-    box-shadow: 0 0 25px  rgba(155,214,113,0.35);
-    transition: opacity 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
-}
-.image-hover-container:hover img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
-}
-
-.image-hover-container:hover .default-img {
-    opacity: 0;
-}
-
-.image-hover-container:hover .hover-img {
-    opacity: 1;
-}
-
-.image-hover-container:hover img {
-    box-shadow: 0 0 35px rgba(218, 113, 240, 0.6); 
 }
 
 .zipper-container{
@@ -518,7 +485,6 @@ ul li a:hover{
     display: none;
 }
 
-
 .card {
     flex: 0 0 calc((100% - 40px) / 3);
     height: 480px;
@@ -543,7 +509,7 @@ ul li a:hover{
 
 .card-content h3{
     margin-top: 0;
-    margin-bottom: 30gitpx;
+    margin-bottom: 30px;
     font-family: 'Courier New', Courier, monospace;
     color:#9BD671;
     font-size: 22px;
@@ -608,7 +574,7 @@ ul li a:hover{
 }
 
 .nav-arrow {
-    position:absolute;
+    position: absolute;
     top: 50%;
     transform: translateY(-50%);
     width: 45px;
@@ -616,7 +582,7 @@ ul li a:hover{
     background: transparent;
     border: #3B2349 2px solid;
     border-radius: 50%;
-    color:#9BD671;
+    color: #9BD671;
     cursor: pointer;
     z-index: 10;
     box-shadow: 0 4px 10px rgba(0,0,0,0.15);
@@ -630,12 +596,162 @@ ul li a:hover{
 .prev-btn { 
     left: -45px;
 }
+
 .next-btn { 
     right: -45px;
 }
 
 .nav-arrow:hover{
-    background:#3B2349;
+    background: #3B2349;
     transform: translateY(-50%) scale(1.1);
 }
 
+.contact-header {
+    text-align: center;
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+
+.contact-header h3 {
+    font-family: monospace;
+    color: white;
+    font-size: 15px;
+    line-height: 22px;
+    max-width: 600px;
+    margin: 15px auto 0 auto; 
+    font-weight: normal;
+}
+
+.contact-split-layout {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 150px;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto 40px auto;
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+
+.contact-form-side, 
+.contact-links-side {
+    flex: 1; 
+    width: 100%;
+}
+
+.contact-form-side form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form-side input,
+.contact-form-side textarea {
+    padding: 12px 15px;
+    border: 2px solid #9BD671;
+    background: transparent;
+    color: white;
+    font-family: monospace;
+    font-size: 14px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.contact-form-side input::placeholder,
+.contact-form-side textarea::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.contact-form-side input:focus,
+.contact-form-side textarea:focus {
+    outline: none;
+    border-color: #3B2349;
+    box-shadow: 0 0 15px rgba(155, 214, 113, 0.4);
+}
+
+.contact-form-side button {
+    padding: 12px 0;
+    background: #3B2349;
+    color: white;
+    border: 2px solid #9BD671;
+    border-radius: 6px;
+    font-family: Ubuntu;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.contact-form-side button:hover {
+    background: #9BD671;
+    color: #3B2349;
+    transform: scale(1.05);
+}
+
+.contact-form-side textarea {
+    padding: 12px 15px;
+    border: 2px solid #9BD671;
+    background: transparent;
+    color:white;
+    font-family: monospace;
+    font-size: 14px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    min-height: 150px;
+    resize: vertical;
+}
+
+.social-connect-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.connect-card {
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.connect-card img {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+}
+
+.connect-card span {
+    color: white;
+    font-family: monospace;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+    
+}
+
+.connect-card:hover {
+    border-color: transparent;
+}
+
+.connect-card:hover img {
+    transform: translateY(-6px);
+}
+
+.connect-card:hover span {
+    color: #9BD671;
+}
+
+.resume-icon-fallback {
+    font-size: 28px;
+    line-height: 1;
+}
+
+@media (max-width: 768px) {
+    .contact-split-layout {
+        flex-direction: column;
+    }
+}
