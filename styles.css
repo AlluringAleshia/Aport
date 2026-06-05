@@ -764,122 +764,195 @@ ul li a:hover{
 /* Responsive Styles  for Mobile Devices */
 
 @media (max-width: 768px) {
+    .main::before {
+        animation: none; 
+        background-attachment: scroll;
+    }
+
+    
     .navbar {
-        width: 95%;
-        padding: 10px 0;
+        width: 100%;
+        flex-direction: column; 
+        gap: 10px;
+        padding: 15px 20px;
     }
 
     .navbar .logo {
-        width: 70px;
-        height: 70px;
+        width: 75px;
+        height: 75px;
+        margin: 0; 
     }
 
     .logo-text {
-        font-size: 18px;
+        font-size: 20px;
     }
 
     ul {
-        gap: 5px;
+        margin: 10px 0 0 0; 
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 100%;
     }
 
     ul li {
-        padding: 8px 10px;
+        padding: 6px 12px;
     }
 
     ul li a {
-        font-size: 13px;
+        font-size: 14px;
     }
 
+    
     .info {
-        margin-left: 5%;
-        margin-top: 15%;
+        margin: 40px 5% 20px 5%; 
+        text-align: center;
     }
 
     .info h1 {
-        font-size: 40px;
+        font-size: 38px;
+        line-height: 1.2;
     }
 
     .info h3 {
         font-size: 14px;
-        line-height: 20px;
+        line-height: 22px;
+        margin-bottom: 25px;
     }
 
-    .info a {
-        padding: 8px 12px;
-        font-size: 14px;
-        margin-right: 10px;
-    }
-
+    
     .image {
         width: 100%;
         height: auto;
-        position: relative;
-        top: auto;
-        bottom: auto;
-        margin-top: 30px;
+        position: relative; 
+        top: auto !important;
+        right: auto;
+        transform: none !important;
+        margin: 30px auto;
+        display: flex;
+        justify-content: center;
     }
 
     .image img {
-        height: auto;
-        width: 80%;
-        left: 50%;
+        position: relative; 
+        height: auto !important;
+        width: 75%; 
+        max-width: 320px;
+        left: auto !important;
+        transform: none !important;
+        bottom: auto;
     }
 
-    .contact-split-layout {
-        flex-direction: column;
-        gap: 30px;
-        max-width: 100%;
-        padding: 0 20px;
-    }
-
-    .card {
-        flex: 0 0 100%;
-        height: auto;
-    }
-
+    
     .about-wrapper {
         width: 90%;
-        padding: 20px;
+        padding: 10px;
+        gap: 20px;
+    }
+
+    .about-info h1 {
+        font-size: 38px;
+    }
+
+    .about-info h2 {
+        font-size: 22px;
+        margin-bottom: 15px;
+    }
+
+    .about-image, 
+    .image-hover-container {
+        width: 220px;
+        height: 220px;
+        margin: 0 auto;
     }
 
     .about-image img,
     .image-hover-container img {
-        width: 200px;
-        height: 200px;
+        width: 220px !important;
+        height: 220px !important;
     }
 
+    .zipper-container p {
+        font-size: 14px;
+        line-height: 22px;
+        padding: 0 10px;
+    }
+
+    
     .slider-wrapper {
+        padding: 0 15px;
+    }
+
+    .slider-track {
+        gap: 15px;
+        padding-bottom: 15px;
+    }
+
+    .card {
+        flex: 0 0 85vw; 
+        height: auto;
+        min-height: 420px;
+        padding: 15px;
+    }
+
+    .card-content h3 {
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+
+    .nav-arrow {
+        display: none; 
+    }
+
+    
+    .contact-header {
         padding: 0 20px;
     }
 
-    .contact-header h1 {
-        font-size: 28px;
+    .contact-header h3 {
+        font-size: 14px;
+        line-height: 20px;
     }
 
+    .contact-split-layout {
+        flex-direction: column; 
+        gap: 40px; 
+        padding: 0 20px;
+        margin-bottom: 20px;
+    }
+
+    .contact-form-side, 
+    .contact-links-side {
+        width: 100%;
+    }
+    
+    .social-connect-grid {
+        align-items: center; 
+    }
+
+   
     .footer {
-        padding: 15px 20px;
-    }
-
-    .footer p {
-        font-size: 12px;
+        padding: 20px;
+        gap: 15px;
     }
 }
 
 @media (max-width: 480px) {
     .info h1 {
-        font-size: 30px;
+        font-size: 32px;
     }
 
     .glowing-tech-title {
-        font-size: 24px !important;
+        font-size: 22px !important;
+        margin-bottom: 20px;
     }
 
     ul li a {
-        font-size: 11px;
-        padding: 6px 8px;
+        font-size: 12px;
     }
-
-    .card-content h3 {
-        font-size: 20px;
+    
+    .about-info h1 {
+        font-size: 32px;
     }
 }
