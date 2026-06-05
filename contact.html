@@ -1,4 +1,4 @@
-<DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <title> Contact Page </title>
@@ -40,9 +40,17 @@
 
             
              <div class="contact-form-side">
-                <form action="mailto:aleshiamcrae04@gmail.com" method="post" enctype="text/plain">
-                    <input type="text" name="name" placeholder="Your Name" required>
-                    <input type="email" name="email" placeholder="Your Email" required>
+
+                <form action="https://api.web3forms.com/submit" method="POST" >
+
+                    <input type="hidden" name="access_key" value="your_access_key_here">
+                    <input type="hidden" name="theme" value="light">
+                    
+
+
+
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email Address" placeholder="Your Email" required>
                     <textarea name="message" placeholder="Your Message" required></textarea>
                     <button type="submit">Send Message</button>
                 </form>
