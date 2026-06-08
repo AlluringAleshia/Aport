@@ -20,9 +20,13 @@ Welcome to my personal portfolio repository! This website serves as a central hu
 
 ##  Preview
 
-| Desktop Layout | Mobile Layout |
+| Desktop Layout  |
 |---|---|
-| *[Desktop screenshot here]* | *[Mobile screenshot here]* |
+| <img width="1440" height="725" alt="Screen Shot 2026-06-08 at 3 43 32 PM" src="https://github.com/user-attachments/assets/6e5ef086-0f58-4fa3-8423-67772f08aa0a" />
+ 
+
+
+
 
 ## Connect With Me
 
